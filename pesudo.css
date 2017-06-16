@@ -10,7 +10,7 @@ section{
 nav{text-align: center;}
 nav a{
     position: relative;
-    margin: 5px 15px;
+    margin: 4px 20px;
     outline: none;
     color: #fff;
     opacity: 0.9;
@@ -23,7 +23,7 @@ nav a{
 nav a:hover, nav a:focus{outline: none;}
 
 /*effect1*/
-.color-1{background: #ff3f05;}
+.color-1{background: #cd4436;}
 .color-1 a:before{
     margin-right: 10px;
     content: "[";
@@ -121,7 +121,7 @@ nav a:hover, nav a:focus{outline: none;}
 }
 
 /*effect3*/
-.color-3{background: #c00eff;}
+.color-3{background: #9e487f;}
 .cl-effect-3 a:after{
     content: "";
     width: 100%;
@@ -182,4 +182,32 @@ nav a:hover, nav a:focus{outline: none;}
     -ms-transform: translateY(10px) translateZ(0);
     -o-transform: translateY(10px) translateZ(0);
     transform: translateY(10px) translateZ(0);
+}
+
+/*cl-effect-5*/
+.color-5{background: #f19f0f;}
+.cl-effect-5 {overflow: hidden;}
+.cl-effect-5 a{
+    display: inline-block;/*很重要没有这个无法实现动态效果*/
+}
+.cl-effect-5 a::after{
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-weight: 600;
+}
+.cl-effect-5 a, .cl-effect-5 a:after{
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+}
+.cl-effect-5 a:hover{
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
